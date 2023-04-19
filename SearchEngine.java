@@ -7,7 +7,7 @@ class Handler implements URLHandler {
 
     public String handleRequest(URI url) {
         if (url.getPath().equals("/")) {
-            return String.format("List: %d", lst);
+            return String.format("List: " + lst);
         }
         else if(url.getPath().contains("/add")){
             String[] parameters = url.getQuery().split("=");
